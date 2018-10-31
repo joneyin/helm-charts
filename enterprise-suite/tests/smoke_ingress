@@ -2,9 +2,10 @@
 
 ## Test access to the console over an ingress setup
 
-#set -x
+set -x
 
 source smokecommon
+
 if [[ $CURRENT_CONTEXT == "minishift" ]]; then exit 0; fi
 
 TMPPIPE=$(mktemp -t pipe.XXX)

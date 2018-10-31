@@ -88,13 +88,13 @@ curl_headers() {
 }
 
 
-# ES console access test
+# Lightbend Console access test
 # test_es_console_responding <url> [<curl-opt>...]
 test_es_console_responding() {
   CONSOLE_URL=$1
   shift
   results=$( curl_query $CONSOLE_URL "" "$@" | fgrep -q '<title>Enterprise Suite Reactive Console</title>' )
-  T $? ES2 console accessible via $CONSOLE_URL "$@"
+  T $? Lightbend Console accessible via $CONSOLE_URL "$@"
 }
 
 # Grafana access test
